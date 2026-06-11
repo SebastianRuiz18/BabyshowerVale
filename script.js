@@ -28,7 +28,7 @@ const form = document.getElementById('rsvp-form');
 const submitBtn = document.getElementById('submit-btn');
 const formMsg = document.getElementById('form-msg');
 
-// REEMPLAZA ESTO CON LA URL QUE TE DÉ GOOGLE APPS SCRIPT
+// TU URL DE GOOGLE APPS SCRIPT
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwnzw0zjlErRrWqIOOygdEcter0Ex5pS6uwFmglfMxO8wLBKr4OeBDsK9hhrLBsvhFfCw/exec'; 
 
 form.addEventListener('submit', e => {
@@ -40,9 +40,10 @@ form.addEventListener('submit', e => {
 
     let requestBody = new FormData(form);
 
-    fetch(scriptURL, { method: 'POST', body: requestBody })
+    // AQUÍ ESTÁ EL FIX: mode: 'no-cors'
+    fetch(scriptURL, { method: 'POST', body: requestBody, mode: 'no-cors' })
         .then(response => {
-            // Éxito
+            // Éxito: Aunque la respuesta sea opaca por el no-cors, la info ya llegó al Sheet
             formMsg.innerText = "¡Gracias! Tu asistencia fue confirmada.";
             formMsg.style.display = "block";
             formMsg.style.color = "var(--pink-dark)";
