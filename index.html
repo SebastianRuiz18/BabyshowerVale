@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Shower - Valeria & Carolina</title>
+    <link rel="icon" type="image/x-icon" href="tortuga2.webp">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/halimun" rel="stylesheet">
+</head>
+<body>
+    <div class="invitation-container">
+        
+        <img src="plantaizq.webp" alt="Hojas decorativas" class="decor decor-plant-left">
+        <img src="tortuga1.webp" alt="Tortuga bebé" class="decor decor-turtle-top">
+        <img src="tortuga2.webp" alt="Tortuga bebé" class="decor decor-turtle-bottom">
+        <img src="plantader.webp" alt="Hojas decorativas" class="decor decor-plant-right">
+
+        <div class="content">
+            <div class="title-wrapper">
+                <h1 class="main-title">BABY SHOWER</h1>
+                <h2 class="script-name valeria">Valeria</h2>
+            </div>
+
+            <p class="subtitle uppercase tracking-wide">LA DULCE ESPERA ESTÁ POR TERMINAR</p>
+            <p class="subtitle normal-case margin-top">Acompáñanos a celebrar la llegada de nuestra hija</p>
+            
+            <h2 class="script-name carolina">Carolina</h2>
+
+            <p class="date-text">18 de Julio 2026</p>
+            <p class="time-text">3:00 PM</p>
+
+            <h3 class="section-heading">COMIDA</h3>
+            <p class="info-text">4 PM A 7 PM</p>
+
+            <h3 class="section-heading">UBICACIÓN</h3>
+            <p class="info-text address">
+                Kino Rooftop<br>
+                Avenida Cochimíes<br>
+                22223 Tijuana, B.C<br>
+                México
+            </p>
+
+            <div class="cta-section">
+                <a href="https://maps.app.goo.gl/odhKEwyxo1VgqbQaA" target="_blank" class="action-btn outline-pink" style="margin-bottom: 20px;">
+                    VER UBICACIÓN
+                </a>
+                
+                <form id="rsvp-form" class="rsvp-form">
+                    <h3 class="section-heading" style="font-size: 1.1rem; margin-top: 0;">CONFIRMAR ASISTENCIA</h3>
+                    <input type="text" name="nombre" placeholder="Nombre completo" required class="form-input">
+                    <input type="number" name="personas" placeholder="¿Cuántos asisten? (Contándote a ti)" min="1" required class="form-input">
+                    <textarea name="mensaje" placeholder="Un mensaje para Valeria o la bebé..." rows="3" class="form-input"></textarea>
+                    
+                    <button type="submit" id="submit-btn" class="action-btn outline-brown" style="cursor: pointer; width: 100%;">
+                        ENVIAR CONFIRMACIÓN
+                    </button>
+                    <p id="form-msg" style="display: none; margin-top: 15px; font-size: 0.9rem; color: var(--pink-dark);"></p>
+                </form>
+            </div>
+
+            <div class="countdown-section">
+                <h4 class="countdown-title">FALTAN</h4>
+                <div id="countdown" class="countdown-container">
+                    <div class="countdown-box"><span id="days">00</span><small>DÍAS</small></div>
+                    <div class="countdown-box"><span id="hours">00</span><small>HRS</small></div>
+                    <div class="countdown-box"><span id="minutes">00</span><small>MIN</small></div>
+                    <div class="countdown-box"><span id="seconds">00</span><small>SEG</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

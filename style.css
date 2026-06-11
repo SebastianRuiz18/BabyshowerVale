@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+@font-face {
+    font-family: 'PapasFont';
+    src: url('Papas.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg-color: #fdfbf7;      
+    --text-dark: #2c2c2c;
+    --pink-bright: #f09eb5;
+    --pink-dark: #b67784;
+    --pink-light: #ffb1c3;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; 
+}
+
+.invitation-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; 
+    padding: 80px 20px 60px; /* Mayor padding top para que las imágenes no asfixien el título */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* =========================================
+   IMÁGENES DECORATIVAS FLOTANTES
+   Usamos 'clamp' para que su tamaño sea dinámico y no invadan texto
+========================================= */
+.decor {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.decor-plant-right { 
+    top: 13%; 
+    left: -15%; 
+    width: clamp(100px, 35vw, 150px); 
+}
+.decor-turtle-top { 
+    top: 35%; 
+    right: -5%; 
+    width: clamp(120px, 25vw, 180px); 
+}
+.decor-turtle-bottom { 
+    bottom: 30%; 
+    left: -15%; 
+    width: clamp(200px, 28vw, 190px); 
+}
+.decor-plant-left { 
+    bottom: -10%; 
+    right: -5%; 
+    width: clamp(170px, 20vw, 150px); 
+}
+
+/* =========================================
+   ESTILOS DE TEXTO Y CONTENIDO
+========================================= */
+.content {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    width: 100%;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* Le da espacio a "La dulce espera..." */
+}
+
+.main-title {
+    font-family: 'PapasFont', serif;
+    font-size: clamp(2.5rem, 8vw, 3.5rem); /* Se adapta a móvil y desktop */
+    color: var(--pink-bright);
+    letter-spacing: 0.15em;
+    font-weight: normal;
+    z-index: 1;
+    line-height: 1;
+}
+
+.script-name {
+    font-family: 'Halimun', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+}
+
+/* FIX: Regresamos a position relative con margin negativo */
+.script-name.valeria {
+    font-size: 3rem;
+    color: var(--pink-dark);
+    margin-top:-.55rem; /* Empuja el nombre sobre "BABY SHOWER" pero respeta el espacio abajo */
+    z-index: 2;
+    position: relative; 
+}
+
+.subtitle { 
+    color: var(--text-dark); 
+    margin-bottom: 15px; 
+    padding: 0 10px; 
+}
+
+.uppercase { 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-size: clamp(0.7rem, 2.5vw, 0.85rem); 
+    font-weight: 500; 
+    margin-bottom: 40px; 
+}
+
+.normal-case { 
+    font-weight: 400; 
+    font-size: clamp(0.85rem, 3vw, 1rem); 
+
+}
+
+.script-name.carolina {
+    margin-top: 2rem;
+    color: #f9c4d1;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(0,0,0,0.04);
+    margin: 40px auto;
+    width: 80%;
+}
+
+/* =========================================
+   DETALLES, BOTONES Y CONTADOR
+========================================= */
+.date-text { font-size: 1.3rem; color: var(--text-dark); margin-bottom: 15px; letter-spacing: 2px; font-weight: 400; }
+.time-text { font-size: 1.1rem; color: var(--text-dark); margin-bottom: 35px; letter-spacing: 2px; font-weight: 300; }
+
+.section-heading {
+    font-family: 'PapasFont', serif;
+    color: var(--pink-dark);
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.info-text {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.address { font-weight: 300; font-size: 0.95rem; }
+
+.cta-section { 
+    margin-top: 50px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    align-items: center; 
+}
+
+.action-btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: transparent;
+    width: 80%;
+    max-width: 250px;
+    font-weight: 500;
+}
+
+.outline-pink { border: 1px solid var(--pink-bright); color: var(--pink-bright); }
+.outline-pink:hover { background: var(--pink-bright); color: #fff; }
+
+.outline-brown { border: 1px solid var(--pink-dark); color: var(--pink-dark); }
+.outline-brown:hover { background: var(--pink-dark); color: #fff; }
+
+.countdown-section {font-family: 'PapasFont', serif; margin-top: 60px; }
+.countdown-title { font-family: 'PapasFont', serif; font-size: 0.9rem; letter-spacing: 4px; color: var(--text-dark); margin-bottom: 20px; font-weight: 500; }
+.countdown-container { display: flex; justify-content: center; gap: 15px; }
+.countdown-box { display: flex; flex-direction: column; align-items: center; }
+.countdown-box span { font-family: 'PapasFont', serif; font-size: 2.2rem; color: var(--pink-bright); }
+.countdown-box small { font-size: 0.65rem; letter-spacing: 2px; color: var(--text-dark); margin-top: 5px; }
+
+/* =========================================
+   FORMULARIO RSVP CSS AGREGADO (CORREGIDO Y CENTRADO)
+========================================= */
+.rsvp-form {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra perfectamente todo el contenido hijo */
+    gap: 15px;
+    margin: 15px auto 0 auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    background-color: transparent;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.3s;
+    text-align: center; /* Alinea el texto al centro visualmente más atractivo */
+}
+
+.form-input:focus {
+    border-color: var(--pink-dark);
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+textarea.form-input {
+    resize: none;
+    border-radius: 15px;
+}
+
+/* Modificamos el botón exclusivamente cuando está adentro del formulario */
+.rsvp-form .action-btn {
+    width: 100%;
+    max-width: none; /* Anula el max-width original para que el botón esté del mismo ancho que los inputs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
