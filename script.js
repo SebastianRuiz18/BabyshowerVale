@@ -29,7 +29,7 @@ const submitBtn = document.getElementById('submit-btn');
 const formMsg = document.getElementById('form-msg');
 
 // TU URL DE GOOGLE APPS SCRIPT
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwnzw0zjlErRrWqIOOygdEcter0Ex5pS6uwFmglfMxO8wLBKr4OeBDsK9hhrLBsvhFfCw/exec'; 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz9Ii-xmMIaIFqbxSDV2KhBg32xmPvYw5PlY48Cqyxwbda-Yai--RHKn9-QFRV8Z0MySA/exec';
 
 form.addEventListener('submit', e => {
     e.preventDefault();
